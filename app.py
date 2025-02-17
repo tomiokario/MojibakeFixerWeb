@@ -6,7 +6,7 @@ st.write("txtファイルをアップロードして、文字化けを修正し�
 
 uploaded_file = st.file_uploader("txtファイルを選択", type=["txt"])
 if uploaded_file is not None:
-    # アップロードされたファイルはバイナリデータなので、UTF-8としてデコード
+    # アップロードされたファイルはUTF-8としてデコード
     original_text = uploaded_file.read().decode('utf-8', errors='replace')
     
     # ftfyを使って文字化け修正
